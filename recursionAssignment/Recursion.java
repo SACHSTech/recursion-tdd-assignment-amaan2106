@@ -15,7 +15,7 @@ public static int count7(int n) {
             }
             //recursive case
             return counter + count7(n/10);
-        }
+      }
 
 
 }
