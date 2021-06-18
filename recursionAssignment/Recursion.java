@@ -18,12 +18,11 @@ public class Recursion{
       }
 
     public static String changePi(String str){
-
           //base case
            if (str.length() <= 1) {
                 return str;
             }
-            
+            // if first character is 'p' and the next character is 'i' then "pi" replaces with "3.14"
             if (str.charAt(0) == 'p' && str.length() >= 2
                     && str.charAt(1) == 'i') {
                 return "3.14" + changePi(str.substring(2, str.length()));
