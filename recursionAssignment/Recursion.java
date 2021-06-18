@@ -31,14 +31,15 @@ public class Recursion{
     }
 
    public static String stringClean(String str){
+            //base case
             if(str.length() < 2){
                 return str;
             }
-
             if(str.charAt(0) == str.charAt(1)){
                 return stringClean(str.substring(1));
             }else{
-            return str.charAt(0) + stringClean(str.substring(1));
+            //recursive case
+                return str.charAt(0) + stringClean(str.substring(1));
             }
 
         }
