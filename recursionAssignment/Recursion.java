@@ -30,18 +30,15 @@ public class Recursion{
             return str.charAt(0) + changePi(str.substring(1, str.length()));
     }
 
-    public static String stringClean(String str){
-            //base case
+   public static String stringClean(String str){
             if(str.length() < 2){
                 return str;
             }
 
-            if(str.charAt(0) =< str.charAt(1)){
-                return stringClean(str.substring(0));
+            if(str.charAt(0) == str.charAt(1)){
+                return stringClean(str.substring(1));
             }else{
-
-            //recursive case
-            return str.charAt(0) ;
+            return str.charAt(0) + stringClean(str.substring(1));
             }
 
         }
