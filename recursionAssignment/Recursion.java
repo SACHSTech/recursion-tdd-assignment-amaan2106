@@ -23,13 +23,31 @@ public class Recursion{
                 return str;
             }
             // if first character is 'p' and the next character is 'i' then "pi" replaces with "3.14"
-            if (str.charAt(0) == 'p' && str.length() >= 2
-                    && str.charAt(1) == 'i') {
+            if (str.charAt(0)=='p' && str.length() >= 2 && str.charAt(1) == 'i') {
                 return "3.14" + changePi(str.substring(2, str.length()));
             }
             //recursive case
             return str.charAt(0) + changePi(str.substring(1, str.length()));
-
-
     }
+
+    public static String stringClean(String str){
+            //base case
+            if(str.length() < 2){
+                return str;
+            }
+
+            if(str.charAt(0) =< str.charAt(1)){
+                return stringClean(str.substring(0));
+            }else{
+
+            //recursive case
+            return str.charAt(0) ;
+            }
+
+        }
+
+
+
+
+
 }
